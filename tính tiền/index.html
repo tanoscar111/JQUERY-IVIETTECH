@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+</head>
+
+<body>
+   <main>
+       <div class="row">
+           <div class="col-md-6">
+               <h2>chọn món</h2>
+               <h2>số lượng</h2>
+               <h2 class="mt-5"> tổng tiền</h2>
+           </div>
+           <div class="col-md-6">
+            <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option value="10">cafe :10000 đồng</option>
+                <option value="12">nước lọc :12000 đồng</option>
+                <option value="13">coca :13000 đồng</option>
+                <option value="15">tea :150000 đồng</option>
+              </select>
+              <input type="number" min="1" max="10"class="form-control soluong" >
+              <p></p>
+              <div class="center">
+              <button class="btn btn-primary mt-4" type="submit">Button</button>
+            </div>
+            <input type="text"class="form-control mt-2 tongtien" >
+           </div>
+       </div>
+   </main>
+</body>
+<script src="./jquery-3.5.1.min.js"></script>
+<script src="./index.js"></script>
+
+</html>

@@ -1,0 +1,17 @@
+.whatis{
+    display: flex;
+    align-items: center;
+}
+.blue{
+    color: blue;
+}
+#text{
+    display: none;
+}
+.btn{
+    position: relative;
+    
+}
+.nam{
+    width: 0;
+}
