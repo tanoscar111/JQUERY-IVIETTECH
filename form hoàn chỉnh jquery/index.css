@@ -1,0 +1,12 @@
+main {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-top: 100px;
+}
+
+input {
+    display: block;
+}

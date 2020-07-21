@@ -6,3 +6,6 @@ $( function() {
     collapsible: true
   });
 } );
+var a=" Le Tan";
+a.split(" ");
+console.log(a);
