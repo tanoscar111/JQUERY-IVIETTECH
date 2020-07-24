@@ -8,3 +8,6 @@
 .checkbox{
     display: block;
 }
+.error {
+    display: block !important;
+}
