@@ -72,21 +72,21 @@ $(function () {
                 }
                 var convertobj=JSON.parse(obj_)
                 console.log(convertobj);
-                $("#Manage").load("index.html",  function() {
-                    $("")
-                    var  content="";
-                    content+= '<tbody>'+
-                    '<tr>'+ 
-                         '<th scope="row">'+convertobj.name +'</th>'+
-                         +'<td>'+convertobj.hour+'</td>'+
-                         +'<td>'+convertobj.status+'</td>'+
-                         +'<td>'+convertobj.color+'</td>'+
-                         +'<td>'+convertobj.select+'</td>'+
-                    
-                ' </tbody>';
-                
-                $("#table1").append(content);
-                });
+                var getdata=$("#form").serialize();
+                $.ajax({
+                    type : 'GET', //Sử dụng kiểu gửi dữ liệu POST
+                    url : 'index.html', 
+                    data : getdata, //dữ liệu sẽ được gửi
+                    success : function(getdata)  // Hàm thực thi khi nhận dữ liệu được từ server
+                              { 
+                                 if(getdata == 'false') 
+                                 {
+                                   alert('Không có người dùng');
+                                 }else{
+                                   $('#table1').html(getdata); 
+                                 }
+                              }
+                    });
               
                
             }
@@ -102,7 +102,16 @@ function company_obj(name, hour, status, color, select) {
     this.select = select;
 }
 
-// $('#Manage').click(function () {
-//     location.href = 'index.html';
     
-// })
+   //     var  content="";
+                //     content+= '<tbody>'+
+                //     '<tr>'+ 
+                //          '<th scope="row">'+convertobj.name +'</th>'+
+                //          +'<td>'+convertobj.hour+'</td>'+
+                //          +'<td>'+convertobj.status+'</td>'+
+                //          +'<td>'+convertobj.color+'</td>'+
+                //          +'<td>'+convertobj.select+'</td>'+
+                    
+                // ' </tbody>';
+                
+                // $("#table1").append(content);
